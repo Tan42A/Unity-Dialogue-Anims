@@ -10,14 +10,8 @@ public class DialogueWithAnims : MonoBehaviour
     private static DialogueWithAnims instance;
    
     [Header("UI Settings")]
-    //[SerializeField] private GameObject dialoguePanel;
-    //[SerializeField] private GameObject homeOptions;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private TextMeshProUGUI dialogue;
-
-    //[Header("Continue Button")]
-    //[SerializeField] private Button ctnButton;
-    //[SerializeField] private string nextScene;
 
     [Header("Dialogue File")]
     [SerializeField] private TextAsset dialogueFile;
@@ -55,12 +49,10 @@ public class DialogueWithAnims : MonoBehaviour
 
     void Start()
     {
-
         currentStory = new Story(dialogueFile.text);
         EnterDialogueMode();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Return))
